@@ -1,0 +1,21 @@
+<meta xmlns="http://exist-db.org/xquery/repo">
+    <description>Rechtsquellen des Kantons Zürich</description>
+    <author/>
+    <status>beta</status>
+    <license>GNU-LGPL</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <prepare>pre-install.xql</prepare>
+    <finish>post-install.xql</finish>
+    <target>rqzh2</target>
+    <permissions user="rqzh" group="tei" mode="rw-r--r--"/>
+    
+    <changelog>
+        <change version="1.0.0">
+            <ul xmlns="http://www.w3.org/1999/xhtml">
+                <li>Apply responsive layout</li>
+                <li>Update to latest pb-webcomponents v1.23.2</li>
+            </ul>
+        </change>
+    </changelog>
+<deployed>2022-09-06T13:21:08.246+02:00</deployed></meta>
