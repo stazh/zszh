@@ -1,6 +1,6 @@
 xquery version "3.1";
 
-module namespace app="http://existsolutions.com/ssrq/app";
+module namespace app="http://existsolutions.com/zszh/app";
 
 import module namespace templates="http://exist-db.org/xquery/html-templating";
 import module namespace config="http://www.tei-c.org/tei-simple/config" at "config.xqm";
@@ -55,7 +55,7 @@ declare
 function app:download-pdf($node as node(), $model as map(*)) {
     let $resource := replace($model?doc, '^([A-Z]{2})/(.+?)/(.+?)(?:_\d{1,2})?\.xml$', '$1/$2/pdf/$3.pdf')
     return
-        <a href="{request:get-context-path()}/apps/rqzh-data/data/{$resource}">
+        <a href="{request:get-context-path()}/apps/zszh-data/data/{$resource}">
         {
             $node/@*,
             templates:process($node/node(), $model)
@@ -65,7 +65,7 @@ function app:download-pdf($node as node(), $model as map(*)) {
 declare
     %templates:wrap
 function app:download-xml($node as node(), $model as map(*)) {
-    <a href="{request:get-context-path()}/apps/rqzh-data/{$model?doc}">
+    <a href="{request:get-context-path()}/apps/zszh-data/{$model?doc}">
     {
         $node/@*,
         templates:process($node/node(), $model)
@@ -745,7 +745,7 @@ declare function app:bibl-caption($list as node()) as xs:string {
 declare %private function app:bibl-quoted($permalink as xs:string) as element(ul) {
    <ul> {
     let $quotes := $config:data-root//tei:bibl/tei:ref[@target = $permalink] ! base-uri(.) 
-        ! substring-after(., 'rqzh-data/') 
+        ! substring-after(., 'zszh-data/') 
         ! substring-before(., '/') 
         => distinct-values()
     for $q in $quotes

@@ -8,7 +8,7 @@ xquery version "3.1";
  
 module namespace a-spec = "http://jinntec.de/ssrq/a-spec";
 
-import module namespace app="http://existsolutions.com/ssrq/app"  at "app.xql";
+import module namespace app="http://existsolutions.com/zszh/app"  at "app.xql";
 
 declare namespace test="http://exist-db.org/xquery/xqsuite";
 declare namespace tei="http://www.tei-c.org/ns/1.0";

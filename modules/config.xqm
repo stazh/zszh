@@ -294,11 +294,11 @@ declare variable $config:context-path :=
 (:~
  : The root of the collection hierarchy containing data.
  :)
-declare variable $config:data-root := "/db/apps/rqzh-data";
+declare variable $config:data-root := "/db/apps/zszh-data";
 
-declare variable $config:temp-root := "/db/apps/rqzh-data/temp";
+declare variable $config:temp-root := "/db/apps/zszh-data/temp";
 
-(: Storage file for external metadata "Register" /db/apps/rqzh-data/register-data.xml :)
+(: Storage file for external metadata "Register" /db/apps/zszh-data/register-data.xml :)
 declare variable $config:person-id-file-name := 'person-Id-data.xml';
 declare variable $config:key-id-file-name := 'key-Id-data.xml';
 declare variable $config:place-id-file-name := 'place-Id-data.xml';

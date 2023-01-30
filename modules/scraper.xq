@@ -50,7 +50,7 @@ declare namespace tei="http://www.tei-c.org/ns/1.0";
 (:scraper:rescraper-errors():)
 
 (:  CODE BITS :)
-(:collection("/db/apps/rqzh-data/temp/place")//info[@id="loc013730"]:)
+(:collection("/db/apps/zszh-data/temp/place")//info[@id="loc013730"]:)
 (:return:)
 (:    for $t in $tmp :)
 (:    return util:document-name($t):)
