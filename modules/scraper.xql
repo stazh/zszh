@@ -591,7 +591,7 @@ declare function scraper:tei-header($category) {
         element { QName("http://www.tei-c.org/ns/1.0", "teiHeader") } {
             element fileDesc {
                 element titleStmt {
-                    element title { "Rechtsquellen des Kantons Zürich: " || $title } 
+                    element title { "Zentrale Serien des Kantons Zürich 19. und 20. Jahrhundert: " || $title } 
                 }, 
                 element publicationStmt {
                     element p { "Publication Information" }
