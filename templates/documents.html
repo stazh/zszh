@@ -1,0 +1,17 @@
+<div data-template="browse:is-writeable" class="collection">
+    <div data-template="browse:dispatch-action"/>
+    <paper-button class="parent-link" data-template="browse:parent-collection">
+        <iron-icon icon="icons:arrow-upward"/>
+        <pb-i18n key="browse.up">Up</pb-i18n>
+    </paper-button>
+    <div data-template="browse:list-works">
+        <ul class="documents" data-template="browse:browse" data-template-per-page="10">
+            <li class="document">
+                <div class="document-info">
+                    <header data-template="browse:short-header"/>
+                </div>
+                <a class="document-thumbnail-link" data-template="app:short-header-link"/>
+            </li>
+        </ul>
+    </div>
+</div>

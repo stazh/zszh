@@ -1,0 +1,155 @@
+<html lang="de">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald"/>
+    <title data-template="config:app-title"/>
+
+    <meta name="description" content="Rechtsquellen des Kantons Zürich"/>
+    <meta itemprop="name" content="Rechtsquellen des Kantons Zürich"/>
+    <meta itemprop="description" content="Rechtsquellen des Kantons Zürich"/>
+    <meta property="og:locale" content="de"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content="Rechtsquellen des Kantons Zürich"/>
+    <meta property="og:title" content="Rechtsquellen des Kantons Zürich - Startseite"/>
+    <meta property="og:description" content="Rechtsquellen des Kantons Zürich"/>
+
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta name="twitter:title" content="Rechtsquellen des Kantons Zürich - Startseite"/>
+    <meta name="twitter:description" content="Rechtsquellen des Kantons Zürich"/>
+    <link rel="canonical" href=""/>
+
+    <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-16.png" sizes="16x16"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-24.png" sizes="24x24"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-32.png" sizes="32x32"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-64.png" sizes="64x64"/>
+    <link rel="stylesheet" href="resources/css/theme.css"/>
+    <link rel="stylesheet" href="resources/css/theme-rqzh.css"/>
+    <script type="module" src="pb-components-bundle.js" data-template="pages:load-components"/>
+    <script src="resources/scripts/app/app.js"/>
+    <script src="resources/scripts/app/index.js"/>
+    <custom-style>
+        <style>
+            main {
+                display: grid;
+                margin: 32px auto 128px auto;
+                grid-template-columns: 50% 50%;
+                gap: 10px 10px;
+                max-width: 980px;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+            .title-image {
+                display: block;
+            }
+
+            .title-image img {
+                width: 100%;
+            }
+
+            @media (min-width: 1024px) {
+                footer {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding-bottom: 0 !important;
+                    background: white;
+                }
+            }
+            @media (max-width: 1023px) {
+                main {
+                    display: block;
+                    margin: 32px 10px 0 10px;
+                }
+
+                .title-image {
+                    text-align: center;
+                }
+                .title-image img {
+                    width: 320px;
+                }
+            }
+        </style>
+    </custom-style>
+</head>
+
+<body>
+    <pb-page data-template="pages:pb-page" locales="resources/i18n/{{ns}}/{{lng}}.json" require-language="require-language" unresolved="unresolved" api-version="1.0.0">
+        <app-drawer-layout force-narrow="force-narrow">
+
+            <app-drawer data-template="templates:include" data-template-path="templates/drawer.html"/>
+
+            <app-header-layout>
+
+                <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall">
+                    <app-toolbar data-template="templates:include" data-template-path="templates/menu.html"/>
+                </app-header>
+
+                <main class="homepage">
+                    <div class="title-text">
+                        <h1 class="tp-title">
+                                <pb-i18n key="doctitle"/>
+                            </h1>
+                        <p class="teaser">
+                                <pb-i18n key="title-text-1"/>
+                            </p>
+                        <p class="teaser">
+                                <pb-i18n key="title-text-2"/>
+                            </p>
+                        <p class="teaser">
+                                <a href="start.html">
+                                    <pb-i18n key="title-text-link"/>
+                                </a>
+                            </p>
+                    </div>
+                    
+                    <a href="start.html" class="title-image">
+                        <img src="resources/images/8562860-large.jpeg"/>
+                    </a>                                        
+                </main>
+
+                <footer class="version" style="display:none">
+                    App: v<span data-template="pages:version"/> /
+                    web components: v<pb-version/>
+                </footer>
+            </app-header-layout>
+        </app-drawer-layout>
+
+        <paper-dialog id="downloadDialog">
+            <h2>
+                <pb-i18n key="dialogs.generatingFile">Generating File...</pb-i18n>
+            </h2>
+            <paper-dialog-scrollable>
+                <pb-i18n key="dialogs.downloadMessage"/>
+            </paper-dialog-scrollable>
+            <div class="buttons">
+                <paper-button dialog-confirm="dialog-confirm" autofocus="autofocus">
+                    <pb-i18n key="dialogs.close">Close</pb-i18n>
+                </paper-button>
+            </div>
+        </paper-dialog>
+
+        <paper-dialog id="errorDialog">
+            <h2>
+                <pb-i18n key="dialogs.error">Error</pb-i18n>
+            </h2>
+            <paper-dialog-scrollable/>
+            <div class="buttons">
+                <paper-button dialog-confirm="dialog-confirm" autofocus="autofocus">
+                    <pb-i18n key="dialogs.close">Close</pb-i18n>
+                </paper-button>
+            </div>
+        </paper-dialog>
+    </pb-page>
+
+    <div class="splash"/>
+
+    <footer data-template="templates:include" data-template-path="templates/footer.html"/>    
+</body>
+
+</html>

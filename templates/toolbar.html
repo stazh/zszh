@@ -1,0 +1,30 @@
+<app-toolbar class="toolbar" sticky="sticky">
+    <a href="${app}/start.html?collection=${collection}" data-template="pages:parse-params" id="browseToParentCollection">
+        <paper-icon-button icon="icons:folder-open"/>
+        <span data-template="app:collection-title"/>
+    </a>
+    <pb-popover for="browseToParentCollection" theme="light-border">
+        <pb-i18n key="browse.up"/>
+        <span data-template="app:collection-title"/>
+    </pb-popover>
+
+    <pb-toggle-feature class="toolbar-button__label" name="mode" properties-on="{&#34;odd&#34;: &#34;rqzh-norm&#34;}" properties-off="{&#34;odd&#34;: &#34;rqzh&#34;}" default="off" init-from-view="init-from-view" emit="transcription" subscribe="transcription" data-i18n="[title]view-switch" title=""><pb-i18n key="view-normalized"/></pb-toggle-feature>
+    <paper-icon-button class="toolbar-button__label" id="openPrintDialog" icon="print"/>
+    <pb-restricted login="login">
+        <pb-ajax subscribe="transcription" emit="transcription" url="api/odd" method="post" event="pb-refresh" title="Recompile ODD" data-i18n="[title]menu.admin.recompile">
+            <h3 slot="title"><pb-i18n key="menu.admin.recompile"/></h3>
+            <paper-icon-button icon="icons:refresh"/>
+        </pb-ajax>
+    </pb-restricted>
+
+    <pb-navigation emit="transcription" keyboard="left" subscribe="transcription" direction="backward" unit="page">
+        <paper-icon-button icon="icons:chevron-left"/>
+    </pb-navigation>
+
+    <pb-navigation emit="transcription" keyboard="right" subscribe="transcription" direction="forward" unit="page">
+        <paper-icon-button icon="icons:chevron-right"/>
+    </pb-navigation>
+
+<!--    <paper-icon-button icon="icons:menu" drawer-toggle="drawer-toggle"/>-->
+    <pb-progress subscribe="transcription" indeterminate="indeterminate" bottom-item="bottom-item"/>
+</app-toolbar>
