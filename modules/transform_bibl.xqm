@@ -9,11 +9,11 @@ declare variable $t-bibl:bibl := doc('../data/SSRQ_ZH_NF_Bibliographie_integral.
 
 (:~ Updates the provided bibliography file for easier processing and display within the tei-publisher app.
  : !!!NOTE!!! These modifications are permanent
- : @see https://gitlab.existsolutions.com/rqzh/rqzh2/-/issues/96
+ : @see https://gitlab.existsolutions.com/rqzh/zszh/-/issues/96
  : 
  : Three entries should be manually corrected before any further processing.
  : 
- : @see https://gitlab.existsolutions.com/rqzh/rqzh2/-/issues/83#note_19630 
+ : @see https://gitlab.existsolutions.com/rqzh/zszh/-/issues/83#note_19630 
  : @see transform_bibl_spec.xqm
  : 
  : @author Duncan Paterson

@@ -47,7 +47,7 @@ declare
              app:bibl-ja-imprint($s)
 };
 
-(:see https://gitlab.existsolutions.com/rqzh/rqzh2/-/issues/83#note_19473 :)
+(:see https://gitlab.existsolutions.com/rqzh/zszh/-/issues/83#note_19473 :)
 declare
     %test:name('JA multi scope')
     %test:args('chbsg000045808')

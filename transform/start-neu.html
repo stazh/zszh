@@ -3060,7 +3060,7 @@ pb-i18n[key="by"]::after {
 
 
 
-<pb-page data-template="pages:pb-page" locales="resources/i18n/{{ns}}/{{lng}}.json" require-language="require-language" api-version="1.0.0" app-root="/exist/apps/rqzh2" template="" endpoint="/exist/apps/rqzh2"><app-drawer-layout force-narrow="force-narrow" narrow="">
+<pb-page data-template="pages:pb-page" locales="resources/i18n/{{ns}}/{{lng}}.json" require-language="require-language" api-version="1.0.0" app-root="/exist/apps/zszh" template="" endpoint="/exist/apps/zszh"><app-drawer-layout force-narrow="force-narrow" narrow="">
 
     <app-drawer slot="drawer" align="right" position="right" style="transition-duration: 200ms; touch-action: pan-y;">
         <div class="drawer-content">
@@ -3068,10 +3068,10 @@ pb-i18n[key="by"]::after {
                 <!-- language selector -->
                 <ul class="drawer-menu">
                     <li>
-                        <a href="/exist/apps/rqzh2/index.html">Start</a>
+                        <a href="/exist/apps/zszh/index.html">Start</a>
                     </li>
                     <li>
-                        <a href="/exist/apps/rqzh2/abbr.html" class="tp-menu-item" title="Abbreviations">
+                        <a href="/exist/apps/zszh/abbr.html" class="tp-menu-item" title="Abbreviations">
                             <div>
                                 <pb-i18n key="abbreviations"><!---->Abkürzungen<!----></pb-i18n>
                             </div>
@@ -3098,10 +3098,10 @@ pb-i18n[key="by"]::after {
 
         <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px); left: 0px; right: 0.333252px;">
             <app-toolbar class="menubar" style="transform: translate3d(0px, 0px, 0px);">
-                <a href="/exist/apps/rqzh2/index.html" class="logo"></a>
+                <a href="/exist/apps/zszh/index.html" class="logo"></a>
                 <pb-media-query query="(min-width: 1024px)" match="">
-                    <a href="/exist/apps/rqzh2/start.html">Start</a>
-                    <a href="/exist/apps/rqzh2/abbr.html" class="tp-menu-item" title="Abbreviations">
+                    <a href="/exist/apps/zszh/start.html">Start</a>
+                    <a href="/exist/apps/zszh/abbr.html" class="tp-menu-item" title="Abbreviations">
                         <div>
                             <pb-i18n key="abbreviations"><!---->Abkürzungen<!----></pb-i18n>
                         </div>
@@ -3119,9 +3119,9 @@ pb-i18n[key="by"]::after {
                                 <pb-i18n key="menu.admin.title"><!---->Administration<!----></pb-i18n>
                             </a>
                             <paper-listbox slot="dropdown-content" role="listbox" tabindex="0">
-                                <paper-item role="option" tabindex="-1" aria-disabled="false" aria-selected="false"><a href="/exist/apps/rqzh2/odd-editor.html?root=/db/apps/rqzh2/resources/odd&amp;output-root=/db/apps/rqzh2/transform&amp;output=transform&amp;odd=rqzh.odd" target="_blank"><pb-i18n key="menu.admin.edit-odd"><!---->ODD editieren<!----></pb-i18n>: rqzh.odd</a></paper-item><paper-item role="option" tabindex="-1" aria-disabled="false" aria-selected="false"><a href="/exist/apps/rqzh2/odd-editor.html?root=/db/apps/rqzh2/resources/odd&amp;output-root=/db/apps/rqzh2/transform&amp;output=transform&amp;odd=rqzh-norm.odd" target="_blank"><pb-i18n key="menu.admin.edit-odd"><!---->ODD editieren<!----></pb-i18n>: rqzh-norm.odd</a></paper-item><paper-item role="option" tabindex="-1" aria-disabled="false" aria-selected="false"><a href="/exist/apps/rqzh2/odd-editor.html?root=/db/apps/rqzh2/resources/odd&amp;output-root=/db/apps/rqzh2/transform&amp;output=transform&amp;odd=docx.odd" target="_blank"><pb-i18n key="menu.admin.edit-odd"><!---->ODD editieren<!----></pb-i18n>: docx.odd</a></paper-item>
+                                <paper-item role="option" tabindex="-1" aria-disabled="false" aria-selected="false"><a href="/exist/apps/zszh/odd-editor.html?root=/db/apps/zszh/resources/odd&amp;output-root=/db/apps/zszh/transform&amp;output=transform&amp;odd=rqzh.odd" target="_blank"><pb-i18n key="menu.admin.edit-odd"><!---->ODD editieren<!----></pb-i18n>: rqzh.odd</a></paper-item><paper-item role="option" tabindex="-1" aria-disabled="false" aria-selected="false"><a href="/exist/apps/zszh/odd-editor.html?root=/db/apps/zszh/resources/odd&amp;output-root=/db/apps/zszh/transform&amp;output=transform&amp;odd=rqzh-norm.odd" target="_blank"><pb-i18n key="menu.admin.edit-odd"><!---->ODD editieren<!----></pb-i18n>: rqzh-norm.odd</a></paper-item><paper-item role="option" tabindex="-1" aria-disabled="false" aria-selected="false"><a href="/exist/apps/zszh/odd-editor.html?root=/db/apps/zszh/resources/odd&amp;output-root=/db/apps/zszh/transform&amp;output=transform&amp;odd=docx.odd" target="_blank"><pb-i18n key="menu.admin.edit-odd"><!---->ODD editieren<!----></pb-i18n>: docx.odd</a></paper-item>
                                 <paper-item role="option" tabindex="-1" aria-disabled="false" aria-selected="false">
-                                    <a href="/exist/apps/rqzh2/api.html" target="_blank">API
+                                    <a href="/exist/apps/zszh/api.html" target="_blank">API
                                         Documentation</a>
                                 </paper-item>
                             </paper-listbox>
@@ -3201,7 +3201,7 @@ pb-i18n[key="by"]::after {
 
                 <div class="card-content card-padding">
 
-                    <pb-search submit-buttons="true" id="search-form" action="/exist/apps/rqzh2/search.html" subforms="#options" subscribe="search" value="" submit-on-load="submit-on-load" redirect="redirect" data-i18n="[place-holder]search-query-attr" place-holder="Wonach suchen?">
+                    <pb-search submit-buttons="true" id="search-form" action="/exist/apps/zszh/search.html" subforms="#options" subscribe="search" value="" submit-on-load="submit-on-load" redirect="redirect" data-i18n="[place-holder]search-query-attr" place-holder="Wonach suchen?">
                         <pb-select name="type" value="text" slot="beforeInput" values="[]">
                             <paper-item value="text" role="option" tabindex="0" aria-disabled="false" aria-selected="true" class="iron-selected"><pb-i18n key="text"><!---->Volltext<!----></pb-i18n></paper-item>
                             <paper-item value="person" role="option" tabindex="-1" aria-disabled="false" aria-selected="false"><pb-i18n key="person"><!---->Person<!----></pb-i18n></paper-item>

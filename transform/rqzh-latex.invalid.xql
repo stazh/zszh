@@ -1,7 +1,7 @@
 (:~
 
     Transformation module generated from TEI ODD extensions for processing models.
-    ODD: /db/apps/rqzh2/resources/odd/rqzh.odd
+    ODD: /db/apps/zszh/resources/odd/rqzh.odd
  :)
 xquery version "3.1";
 
@@ -21,9 +21,9 @@ import module namespace css="http://www.tei-c.org/tei-simple/xquery/css";
 
 import module namespace latex="http://www.tei-c.org/tei-simple/xquery/functions/latex";
 
-import module namespace ext-latex="http://www.tei-c.org/tei-simple/xquery/functions/ssrq-latex" at "xmldb:exist:///db/apps/rqzh2/modules/ext-latex.xql";
+import module namespace ext-latex="http://www.tei-c.org/tei-simple/xquery/functions/ssrq-latex" at "xmldb:exist:///db/apps/zszh/modules/ext-latex.xql";
 
-import module namespace ec="http://www.tei-c.org/tei-simple/xquery/functions/ssrq-common" at "xmldb:exist:///db/apps/rqzh2/modules/ext-common.xql";
+import module namespace ec="http://www.tei-c.org/tei-simple/xquery/functions/ssrq-common" at "xmldb:exist:///db/apps/zszh/modules/ext-common.xql";
 
 (: generated template function for element spec: teiHeader :)
 declare %private function model:template-teiHeader($config as map(*), $node as node()*, $params as map(*)) {
@@ -262,7 +262,7 @@ declare function model:transform($options as map(*), $input as node()*) {
         map:merge(($options,
             map {
                 "output": ["latex","print"],
-                "odd": "/db/apps/rqzh2/resources/odd/rqzh.odd",
+                "odd": "/db/apps/zszh/resources/odd/rqzh.odd",
                 "apply": model:apply#2,
                 "apply-children": model:apply-children#3
             }

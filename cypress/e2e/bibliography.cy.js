@@ -9,14 +9,14 @@ describe('bibliography page', () => {
         .should('have.length', 2)
     })
 
-    // see https://gitlab.existsolutions.com/rqzh/rqzh2/-/issues/83#note_19302
+    // see https://gitlab.existsolutions.com/rqzh/zszh/-/issues/83#note_19302
     it('should only have 3 columns', () => {
         cy.get('thead > tr >th')
         .should('be.visible')
         .should('have.length', 6)
     })
 
-    // see https://gitlab.existsolutions.com/rqzh/rqzh2/-/issues/83#note_19473
+    // see https://gitlab.existsolutions.com/rqzh/zszh/-/issues/83#note_19473
     it('should not truncate page numbers in journal articels', () => {
         cy.get('tr#chbsg000045808')
         .contains('Bickel, Wolf-H.')

@@ -1,7 +1,7 @@
 (:~
 
     Transformation module generated from TEI ODD extensions for processing models.
-    ODD: /db/apps/rqzh2/resources/odd/docx.odd
+    ODD: /db/apps/zszh/resources/odd/docx.odd
  :)
 xquery version "3.1";
 
@@ -69,7 +69,7 @@ declare function model:transform($options as map(*), $input as node()*) {
         map:merge(($options,
             map {
                 "output": ["tei"],
-                "odd": "/db/apps/rqzh2/resources/odd/docx.odd",
+                "odd": "/db/apps/zszh/resources/odd/docx.odd",
                 "apply": model:apply#2,
                 "apply-children": model:apply-children#3
             }

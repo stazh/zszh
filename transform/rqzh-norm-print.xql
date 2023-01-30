@@ -1,7 +1,7 @@
 (:~
 
     Transformation module generated from TEI ODD extensions for processing models.
-    ODD: /db/apps/rqzh2/resources/odd/rqzh-norm.odd
+    ODD: /db/apps/zszh/resources/odd/rqzh-norm.odd
  :)
 xquery version "3.1";
 
@@ -21,9 +21,9 @@ import module namespace css="http://www.tei-c.org/tei-simple/xquery/css";
 
 import module namespace fo="http://www.tei-c.org/tei-simple/xquery/functions/fo";
 
-import module namespace ec="http://www.tei-c.org/tei-simple/xquery/functions/ssrq-common" at "xmldb:exist:///db/apps/rqzh2/modules/ext-common.xql";
+import module namespace ec="http://www.tei-c.org/tei-simple/xquery/functions/ssrq-common" at "xmldb:exist:///db/apps/zszh/modules/ext-common.xql";
 
-import module namespace ext-fo="http://www.tei-c.org/tei-simple/xquery/ext-fo" at "xmldb:exist:///db/apps/rqzh2/modules/ext-fo.xql";
+import module namespace ext-fo="http://www.tei-c.org/tei-simple/xquery/ext-fo" at "xmldb:exist:///db/apps/zszh/modules/ext-fo.xql";
 
 (: generated template function for element spec: org :)
 declare %private function model:template-org($config as map(*), $node as node()*, $params as map(*)) {
@@ -254,7 +254,7 @@ declare function model:transform($options as map(*), $input as node()*) {
         map:merge(($options,
             map {
                 "output": ["fo","print"],
-                "odd": "/db/apps/rqzh2/resources/odd/rqzh-norm.odd",
+                "odd": "/db/apps/zszh/resources/odd/rqzh-norm.odd",
                 "apply": model:apply#2,
                 "apply-children": model:apply-children#3
             }

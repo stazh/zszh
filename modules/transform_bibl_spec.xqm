@@ -117,7 +117,7 @@ declare
 };  
 
 (:~ broken Bickel 2006
- : @see https://gitlab.existsolutions.com/rqzh/rqzh2/-/issues/83#note_19476
+ : @see https://gitlab.existsolutions.com/rqzh/zszh/-/issues/83#note_19476
  :)
 declare
     %test:name('item-chbsg000045808')
@@ -147,7 +147,7 @@ declare
 }; 
 
 (:~ working Hauser 1912a 
- : @see https://gitlab.existsolutions.com/rqzh/rqzh2/-/issues/83#note_19477
+ : @see https://gitlab.existsolutions.com/rqzh/zszh/-/issues/83#note_19477
  :)
 declare
     %test:name('item-chbsg000137379')

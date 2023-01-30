@@ -7,7 +7,7 @@
     <type>application</type>
     <prepare>pre-install.xql</prepare>
     <finish>post-install.xql</finish>
-    <target>rqzh2</target>
+    <target>zszh</target>
     <permissions user="rqzh" group="tei" mode="rw-r--r--"/>
     
     <changelog>

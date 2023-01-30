@@ -2,9 +2,9 @@
   "dependencies": {
     "@teipublisher/pb-components": "git+https://github.com/eeditiones/tei-publisher-components.git#master"
   },
-  "name": "rqzh2",
-  "version": "1.1.22",
-  "description": "Rechtsquellen des Kantons Zürich",
+  "name": "zszh",
+  "version": "1.0",
+  "description": "Zentrale Serien des Kantons Zürich 19. und 20. Jahrhundert",
   "devDependencies": {
     "cypress": "^10.6.0"
   },  

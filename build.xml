@@ -1,4 +1,4 @@
-<project name="rqzh2" default="xar">
+<project name="zszh" default="xar">
     <xmlproperty file="expath-pkg.xml"/><!-- Adjust path below to match location of your npm binary -->
     <property name="npm" value="/usr/local/bin/npm"/>
     <property name="project.version" value="${package(version)}"/>
