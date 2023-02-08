@@ -385,7 +385,7 @@ declare function pmf:url($url as xs:string) {
 };
 
 declare function pmf:format-author($author as node()*) {
-    (: save typing in rqzh.odd :)
+    (: save typing in zszh.odd :)
 
     if ($author) then
         if (count($author) > 2) then
@@ -402,7 +402,7 @@ declare function pmf:switch-name($name as node()*) {
 };
 
 declare function pmf:format-editor($editor as node()*) {
-    (: save typing in rqzh.odd :)
+    (: save typing in zszh.odd :)
 
     if ($editor) then
         if (count($editor) > 2) then
@@ -416,7 +416,7 @@ declare function pmf:format-editor($editor as node()*) {
 };
 
 declare function pmf:print-date($date as node()*) {
-    (: save typing in rqzh.odd :)
+    (: save typing in zszh.odd :)
 
     let $date-string :=
     	if ($date/@when) then

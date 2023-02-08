@@ -1,7 +1,7 @@
 (:~
 
     Transformation module generated from TEI ODD extensions for processing models.
-    ODD: /db/apps/zszh/resources/odd/rqzh-norm.odd
+    ODD: /db/apps/zszh/resources/odd/zszh-norm.odd
  :)
 xquery version "3.1";
 
@@ -261,7 +261,7 @@ declare function model:transform($options as map(*), $input as node()*) {
         map:merge(($options,
             map {
                 "output": ["web"],
-                "odd": "/db/apps/zszh/resources/odd/rqzh-norm.odd",
+                "odd": "/db/apps/zszh/resources/odd/zszh-norm.odd",
                 "apply": model:apply#2,
                 "apply-children": model:apply-children#3
             }

@@ -15,8 +15,8 @@ import module namespace pm-rqzh-norm-epub="http://www.tei-c.org/pm/models/rqzh-n
 
 declare variable $pm-config:web-transform := function($xml as node()*, $parameters as map(*)?, $odd as xs:string?) {
     switch ($odd)
-    case "rqzh.odd" return pm-rqzh-web:transform($xml, $parameters)
-case "rqzh-norm.odd" return pm-rqzh-norm-web:transform($xml, $parameters)
+    case "zszh.odd" return pm-rqzh-web:transform($xml, $parameters)
+case "zszh-norm.odd" return pm-rqzh-norm-web:transform($xml, $parameters)
     default return pm-rqzh-web:transform($xml, $parameters)
             
     
@@ -26,8 +26,8 @@ case "rqzh-norm.odd" return pm-rqzh-norm-web:transform($xml, $parameters)
 
 declare variable $pm-config:print-transform := function($xml as node()*, $parameters as map(*)?, $odd as xs:string?) {
     switch ($odd)
-    case "rqzh.odd" return pm-rqzh-print:transform($xml, $parameters)
-case "rqzh-norm.odd" return pm-rqzh-norm-print:transform($xml, $parameters)
+    case "zszh.odd" return pm-rqzh-print:transform($xml, $parameters)
+case "zszh-norm.odd" return pm-rqzh-norm-print:transform($xml, $parameters)
     default return pm-rqzh-print:transform($xml, $parameters)
             
     
@@ -37,8 +37,8 @@ case "rqzh-norm.odd" return pm-rqzh-norm-print:transform($xml, $parameters)
 
 declare variable $pm-config:latex-transform := function($xml as node()*, $parameters as map(*)?, $odd as xs:string?) {
     switch ($odd)
-    case "rqzh.odd" return pm-rqzh-latex:transform($xml, $parameters)
-case "rqzh-norm.odd" return pm-rqzh-norm-latex:transform($xml, $parameters)
+    case "zszh.odd" return pm-rqzh-latex:transform($xml, $parameters)
+case "zszh-norm.odd" return pm-rqzh-norm-latex:transform($xml, $parameters)
     default return pm-rqzh-latex:transform($xml, $parameters)
             
     
@@ -48,8 +48,8 @@ case "rqzh-norm.odd" return pm-rqzh-norm-latex:transform($xml, $parameters)
 
 declare variable $pm-config:epub-transform := function($xml as node()*, $parameters as map(*)?, $odd as xs:string?) {
     switch ($odd)
-    case "rqzh.odd" return pm-rqzh-epub:transform($xml, $parameters)
-case "rqzh-norm.odd" return pm-rqzh-norm-epub:transform($xml, $parameters)
+    case "zszh.odd" return pm-rqzh-epub:transform($xml, $parameters)
+case "zszh-norm.odd" return pm-rqzh-norm-epub:transform($xml, $parameters)
     default return pm-rqzh-epub:transform($xml, $parameters)
             
     

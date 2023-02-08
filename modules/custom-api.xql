@@ -105,7 +105,7 @@ declare function api:html($request as map(*)) {
                                 <head>
                                     <meta charset="utf-8"/>
                                     <link rel="stylesheet" type="text/css" href="resources/css/theme.css"/>
-                                    <link rel="stylesheet" type="text/css" href="resources/css/theme-rqzh.css"/>
+                                    <link rel="stylesheet" type="text/css" href="resources/css/theme-zszh.css"/>
                                 </head>
                                 <body class="printPreview">
                                     <paper-button id="closePage" class="hidden-print" onclick="window.close()" title="close this page">

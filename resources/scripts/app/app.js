@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
   pbEvents.subscribe("pb-update", "transcription", (ev) => {
     document.body.setAttribute(
       "data-view",
-      ev.detail.data.odd === "rqzh-norm.odd" ? "normalized" : "diplomatic"
+      ev.detail.data.odd === "zszh-norm.odd" ? "normalized" : "diplomatic"
       );
       blocks.push(ev.detail.root);
       console.log('blocks: %d', blocks.length);
@@ -151,7 +151,7 @@ window.addEventListener("DOMContentLoaded", () => {
       let docPath = currentPath.replace( /^.*\/([^/]+\/.*)$/, "$1" );
       let urlPart = currentPath.replace( /^(.*)\/[^/]+\/.*$/, "$1" );
       let updatedDocPath = docPath.replace( "/", "%2F" );
-      let newUrl = `${urlPart}/api/document/${updatedDocPath}/html?odd=rqzh-norm.odd`;
+      let newUrl = `${urlPart}/api/document/${updatedDocPath}/html?odd=zszh-norm.odd`;
       //console.log( newUrl );
       window.open( newUrl );
     } )

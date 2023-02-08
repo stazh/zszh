@@ -15,13 +15,13 @@
         </fileDesc>
         <encodingDesc>
             <tagsDecl>
-                <rendition source="rqzh.css"/>
+                <rendition source="zszh.css"/>
             </tagsDecl>
         </encodingDesc>
     </teiHeader>
     <text>
         <body>
-            <schemaSpec start="TEI teiCorpus" ident="rqzh-norm" source="rqzh.odd">
+            <schemaSpec start="TEI teiCorpus" ident="rqzh-norm" source="zszh.odd">
                 <elementSpec ident="lb" mode="change">
                     <model behaviour="omit"/>
                 </elementSpec>

@@ -324,7 +324,7 @@ declare variable $config:data-exclude := (
     collection($config:data-root || "/SG/SG_III_4/latest")/tei:TEI
 );
 
-declare variable $config:default-odd :="rqzh.odd";
+declare variable $config:default-odd :="zszh.odd";
 
 declare variable $config:odd := $config:default-odd;
 
@@ -333,7 +333,7 @@ declare variable $config:odd := $config:default-odd;
  : make sure to run modules/generate-pm-config.xql to update the main configuration
  : module for transformations (modules/pm-config.xql).
  :)
-declare variable $config:odd-available := ( $config:default-odd, "rqzh-norm.odd" );
+declare variable $config:odd-available := ( $config:default-odd, "zszh-norm.odd" );
 
 (:~
  : List of ODD files which are used internally only, i.e. not for displaying information

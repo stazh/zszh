@@ -8,7 +8,7 @@ import module namespace m='http://www.tei-c.org/pm/models/rqzh/epub' at '/db/app
 declare function pml:transform($xml as node()*, $parameters as map(*)?) {
 
    let $options := map {
-       "styles": ["transform/rqzh.css"],
+       "styles": ["transform/zszh.css"],
        "collection": "/db/apps/zszh/transform",
        "parameters": if (exists($parameters)) then $parameters else map {}
    }
