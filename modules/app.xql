@@ -442,16 +442,18 @@ declare
     %templates:default("editionseinheit","")
 function app:get-edition-unit($node as node(), $model as map(*), $editionseinheit as xs:string) {
     switch($editionseinheit) 
-        case "ZH_NF_II_11" return   
-            <pb-i18n key="menu.ZH_NF_II_11"/>
-        case "ZH_NF_II_3" return 
-            <pb-i18n key="menu.ZH_NF_II_3"/>
+        case "Abl_XML" return   
+            <pb-i18n key="menu.Abl_XML"/>
+        case "OS_XML" return 
+            <pb-i18n key="menu.OS_XML"/>
         case "ZH_NF_I_1_11" return 
             <pb-i18n key="menu.ZH_NF_I_1_11"/>
         case "ZH_NF_I_1_3" return 
             <pb-i18n key="menu.ZH_NF_I_1_3"/>
-        case "ZH_NF_I_2_1" return 
-            <pb-i18n key="menu.ZH_NF_I_2_1"/>
+        case "KRP_XML" return 
+            <pb-i18n key="menu.KRP_XML"/>
+        case "RRB_XML" return 
+            <pb-i18n key="menu.RRB_XML"/>
         default return 
             <pb-i18n key="menu.all"/>
 };
