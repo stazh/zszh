@@ -1,9 +1,10 @@
 ## Wichtige Links
 
-#pb-components
-
 https://unpkg.com/@teipublisher/pb-components@1.43.2/dist/api.html#pb-browse-docs.0
 
+https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd
+
+https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd
 
 ## Build zszh
 * simply run the command `ant` in your terminal in the zszh folder and install the data package (see below).
