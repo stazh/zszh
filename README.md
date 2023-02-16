@@ -6,6 +6,8 @@ https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docb
 
 https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd
 
+https://teipublisher.com/exist/apps/tei-publisher/api.html
+
 ## Build zszh
 * simply run the command `ant` in your terminal in the zszh folder and install the data package (see below).
   
