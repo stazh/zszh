@@ -1,4 +1,8 @@
-# zszh Readme
+## Wichtige Links
+
+#pb-components
+
+https://unpkg.com/@teipublisher/pb-components@1.43.2/dist/api.html#pb-browse-docs.0
 
 
 ## Build zszh
