@@ -45,6 +45,21 @@ your existing clone
 1. run 'npm run start' to start the devserver which by default listens on port 8000
 1. wait until server is running and start eXist-db with zszh 
 
+## Debug TEI-components (pb-xxx)
+1. Clone the tei-publisher-components repository: https://github.com/eeditiones/tei-publisher-components
+2. Change the zszh-config.
+    i. Comment line 30 and comment out 29 (`declare variable $config:webcomponents :="dev";`)
+    ii. Comment line 38 and comment out 39 (`declare variable $config:webcomponents-cdn := "http://localhost:8000";`)
+3. Go into the `tei-publisher-components`-directory and run `npm run start`. Make sure no other service is running on port 8000
+4. Open the `tei-publisher-components`-directory in VS Code
+5. Set your breakpoints directly in the JavaScript-Files in VS Code (src-directory)
+6. Go to the debug-tab and choose `Launch in Chrome``
+    i. Make sure the start-URL in launch.json is NOT refering to port 8080. Choose localhost:8000 instead
+7. Open a new tab and navigate to localhost:8080
+8. Open the zszh-application from existDb
+9. Go the the `start.html`-page
+10. Your breakpoints should be triggered directly in VS Code. You can then use the Jump Over, Jump Into and Jump out of to navigate the code
+11. If your breakpoints are not hit, close and re-open the VS Code window where the `tei-publisher-components`-directory was opened
 
 ## Testing
 
