@@ -232,6 +232,7 @@
 </head>
 
 <body>
+    asjlfkjsf
     <pb-page data-template="pages:pb-page" locales="resources/i18n/{{ns}}/{{lng}}.json" require-language="require-language" unresolved="unresolved" api-version="1.0.0">
         <app-drawer-layout force-narrow="force-narrow">
 
@@ -254,39 +255,17 @@
                 <section>
                     <div class="pb-container">
                         <div class="main-grid" data-template="search:set-default-params">
+
+
                             <main class="main-grid__item">
-                                <div class="header card-padding">
-                                    <h2>
-                                        <pb-i18n key="browse.documents">Documents</pb-i18n>
-                                    </h2>
-                                </div>
+
 
                                 <div class="card-content card-padding">
                                     <div class="browse" slot="page">
                                         <pb-browse-docs id="document-list" url="api/collection/" sort-options="[{&#34;label&#34;: &#34;browse.orig-date&#34;, &#34;value&#34;: &#34;idno&#34;},{&#34;label&#34;: &#34;browse.title&#34;, &#34;value&#34;: &#34;title&#34;}]" sort-by="idno" filter-options="[{&#34;label&#34;: &#34;browse.title&#34;, &#34;value&#34;: &#34;title&#34;},{&#34;label&#34;: &#34;browse.author&#34;, &#34;value&#34;: &#34;author&#34;},{&#34;label&#34;: &#34;browse.file&#34;, &#34;value&#34;: &#34;file&#34;}]" filter-by="title" auto="auto" history="history" login="login" subforms="#options" emit="docs" subscribe="docs">
                                             <div slot="header" class="timeline">                 
                                                     <h3>
-                                                        <a href="${app}/start.html?collection=ZH_NF_I_1_11" data-template="pages:parse-params">
-                                                            <pb-i18n key="menu.ZH_NF_I_1_11">ZH_NF_I_1_11</pb-i18n>
-                                                        </a>
-                                                    </h3>
-                                                    <h3>
-                                                        <a href="${app}/start.html?collection=KRP_XML" data-template="pages:parse-params">
-                                                            <pb-i18n key="menu.KRP_XML">Kantonsratsbeschlüsse (KRP)</pb-i18n>
-                                                        </a>
-                                                    </h3>
-                                                    <h3>
-                                                        <a href="${app}/start.html?collection=OS_XML" data-template="pages:parse-params">
-                                                            <pb-i18n key="menu.OS_XML">Gesetzessammlung (OS)</pb-i18n>
-                                                        </a>
-                                                    </h3>
-                                                    <h3>
-                                                        <a href="${app}/start.html?collection=Abl_XML/" data-template="pages:parse-params">
-                                                            <pb-i18n key="menu.Abl_XML">Amtsblatt</pb-i18n>
-                                                        </a>
-                                                    </h3>
-                                                    <h3>
-                                                        <a href="${app}/start-rrb.html" data-template="pages:parse-params">
+                                                        <a href="${app}/start.html?collection=RRB_XML/" data-template="pages:parse-params">
                                                             <pb-i18n key="menu.RRB_XML">Regierungsratsbeschlüsse</pb-i18n>
                                                         </a>
                                                     </h3>
