@@ -735,10 +735,10 @@
             <!--<model behaviour="block" cssClass="header-short">
                 <param name="content" value="ec:format-id(seriesStmt/idno)"/>
             </model>-->
-            <model behaviour="link" cssClass="header-short title">
+           <!-- <model behaviour="link" cssClass="header-short title">
                 <param name="content" value="                             let $subtype := ancestor::TEI/@subtype                              return switch ($subtype)                                 case 'a' return 'Reihenvorwort'                                 case 'b' return 'Vorwort'                                 case 'c' return 'Einleitung'                                 case 'd' return 'Quellenverzeichnis'                                 default return 'Introduction'                                 "/>
                 <param name="link" value="$parameters?doc"/>
-            </model>
+            </model> -->
         </modelSequence>
                     <modelSequence predicate="$parameters?header='short'">
             <desc>Output a short header to be used in document listings</desc>
@@ -1084,7 +1084,7 @@
                     <model predicate="ancestor::div/@type='collection'" behaviour="link">
             <desc>Link in Klammerdokument</desc>
             <param name="link" value="string() || '.xml'"/>
-            <param name="content" value="(doc(util:collection-name(.) || '/' || . || '.xml')//sourceDesc/msDesc/head/text(), ' (', ec:format-id(.), ')')"/>
+            <param name="content" value="(doc(util:collection-name(.) || '/' || . || '.xml')//sourceDesc/bibl/title/text(), ' (', ec:format-id(.), ')')"/>
         </model>
                     <model predicate="not(@target) and matches(., '^(?:SSRQ|SDS|FDS)_')" behaviour="link">
             <desc>Link auf ein anderes Dokument innerhalb Portal</desc>
@@ -1213,7 +1213,7 @@
                 <param name="content" value="fileDesc"/>
             </model>
             <model behaviour="block">
-                <param name="content" value=".//msDesc/head"/>
+                <param name="content" value=".//sourceDesc/bibl/title"/>
             </model>
             <model behaviour="output-date">
                 <param name="content" value=".//msDesc"/>
@@ -1244,7 +1244,7 @@
                                 </pb-collapse>
                             </pb:template>
             </model>
-            <model predicate="root($parameters?root)/TEI[not(@type) or @type != 'introduction'] and ec:existsAdditionalSource(.//fileDesc/seriesStmt/idno/text())" behaviour="block">
+            <!--<model predicate="root($parameters?root)/TEI[not(@type) or @type != 'introduction']" behaviour="block">
                 <param name="content" value="ec:additionalSource(.//fileDesc/seriesStmt/idno/text())"/>
                 <pb:template xmlns="" xml:space="preserve">
                                 <pb-collapse class="metadata" expand-icon="icons:chevron-right" collapse-icon="icons:expand-more">
@@ -1256,7 +1256,7 @@
                                     <div id="additional" slot="collapse-content">[[content]]</div>
                                 </pb-collapse>
                             </pb:template>
-            </model>
+            </model>-->
         </modelSequence>
                     <model output="fo" behaviour="omit"/>
                     <model output="web" predicate="$parameters?header='short'" behaviour="block"/>

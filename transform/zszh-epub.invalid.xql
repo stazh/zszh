@@ -375,8 +375,8 @@ declare function model:apply($config as map(*), $input as node()*) {
                                                 return
                                                                                                 epub:block(map:merge(($config, map:entry("template", true()))), ., ("tei-teiHeader8", css:map-rend-to-class(.)), $content)
                                             else
-                                                (),
-                                            if (root($parameters?root)/TEI[not(@type) or @type != 'introduction'] and ec:existsAdditionalSource(.//fileDesc/seriesStmt/idno/text())) then
+                                                ()
+                                            (:if (root($parameters?root)/TEI[not(@type) or @type != 'introduction'])) then
                                                 let $params := 
                                                     map {
                                                         "content": ec:additionalSource(.//fileDesc/seriesStmt/idno/text())
@@ -387,7 +387,7 @@ declare function model:apply($config as map(*), $input as node()*) {
                                                 return
                                                                                                 epub:block(map:merge(($config, map:entry("template", true()))), ., ("tei-teiHeader9", css:map-rend-to-class(.)), $content)
                                             else
-                                                ()
+                                                ():)
                                         )
 
                                     else
