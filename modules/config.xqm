@@ -26,8 +26,8 @@ declare namespace tei="http://www.tei-c.org/ns/1.0";
  : If a version is given, the components will be loaded from a public CDN.
  : This is recommended unless you develop your own components.
  :)
-declare variable $config:webcomponents :="dev";
-(:declare variable $config:webcomponents :="1.38.1";:)
+(:declare variable $config:webcomponents :="dev";:)
+declare variable $config:webcomponents :="1.38.1";
 
 
 (:~
@@ -35,8 +35,8 @@ declare variable $config:webcomponents :="dev";
  : own library extending pb-components and published it to a CDN.
  :)
 (: declare variable $config:webcomponents-cdn := "https://cdn.jsdelivr.net/npm/@teipublisher/pb-components"; :)
-(:declare variable $config:webcomponents-cdn := "https://unpkg.com/@teipublisher/pb-components";:)
-declare variable $config:webcomponents-cdn := "http://localhost:8000";
+declare variable $config:webcomponents-cdn := "https://unpkg.com/@teipublisher/pb-components";
+(:declare variable $config:webcomponents-cdn := "http://localhost:8000";:)
 (: declare variable $config:webcomponents-cdn := "local"; :)
 
 
