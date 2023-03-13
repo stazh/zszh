@@ -2,7 +2,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>TEI Processing Model for RQZH</title>
+                <title>TEI Processing Model for ZSZH</title>
             </titleStmt>
             <publicationStmt>
                 <p>
@@ -746,11 +746,11 @@
                 <param name="content" value="ec:format-id(seriesStmt/idno)"/>
             </model>
             <model behaviour="link" cssClass="header-short">
-                <param name="content" value="sourceDesc/msDesc/head"/>
+                <param name="content" value="sourceDesc/bibl/title"/>
                 <param name="link" value="$parameters?doc"/>
             </model>
             <model behaviour="block" cssClass="header-short">
-                <param name="content" value="if (exists(sourceDesc/msDesc/msContents/msItem/filiation[@type='original'][origDate])) then                                      ec:print-date(sourceDesc/msDesc/msContents/msItem/filiation[@type='original']/origDate)                                     else if (exists(sourceDesc/msDesc/history/origin/origDate)) then                                     ec:print-date(sourceDesc/msDesc/history/origin/origDate)                                    else                                       ()"/>
+                <param name="content" value="if (exists(sourceDesc/bibl/date)) then ec:print-date(sourceDesc/bibl/date) else if (exists(sourceDesc/bibl/title/date)) then ec:print-date(sourceDesc/bibl/title/date) else ()"/>
             </model>
             <model behaviour="block" cssClass="header-short">
                 <param name="content" value="editionStmt"/>
