@@ -742,9 +742,9 @@
         </modelSequence>
                     <modelSequence predicate="$parameters?header='short'">
             <desc>Output a short header to be used in document listings</desc>
-            <model behaviour="block" cssClass="header-short">
-                <param name="content" value="ec:format-id(seriesStmt/idno)"/>
-            </model>
+            <!--<model behaviour="block" cssClass="header-short">
+                <param name="content" value="seriesStmt/idno"/>
+            </model>-->
             <model behaviour="link" cssClass="header-short">
                 <param name="content" value="sourceDesc/bibl/title"/>
                 <param name="link" value="$parameters?doc"/>
@@ -782,10 +782,10 @@
                             <h4>[[fileDescTitle]]</h4>
                         </pb:template>
         </model>
-                    <model predicate="$parameters?view='metadata'" behaviour="block">
+            <model predicate="$parameters?view='metadata'" behaviour="block">
             <desc>Render popover containing tei metadata</desc>
             <param name="idno-canton" value="ec:get-canton(seriesStmt/idno)"/>
-            <param name="idno-format" value="ec:format-id(seriesStmt/idno)"/>
+            <param name="idno-format" value="titleStmt/title"/>
             <param name="stmtTitle" value="seriesStmt/title"/>
             <param name="fileDescTitle" value="titleStmt/title"/>
             <param name="fileDescPerson" value="ec:persName-list(titleStmt/respStmt[1]/persName)"/>
@@ -798,14 +798,14 @@
                             </span>
                             <pb-popover placement="bottom" for="info">
                                     <p>
-                                        [[stmtTitle]], [[fileDescTitle]],
+                                        [[stmtTitle]]<!---, [[fileDescTitle]],
                                         <pb-i18n key="by">von</pb-i18n>
-                                        [[fileDescPerson]]
+                                        [[fileDescPerson]]-->
                                     </p>
-                                    <p>
+                                   <!-- <p>
                                         <pb-i18n key="zitation">Zitation:</pb-i18n>
                                         <a href="[[link]]">[[idno-format]]</a>
-                                    </p>
+                                    </p>-->
                                     <p>
                                         <pb-i18n key="lizenz">Lizenz:</pb-i18n>
                                         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.de" target="_blank">CC BY-NC-SA</a>
@@ -943,13 +943,13 @@
                 <elementSpec ident="msDesc" mode="add">
                     <desc>Stückbeschreibung ausgeben</desc>
                     <model behaviour="list">
-            <param name="content" value="(msIdentifier,history/origin/origDate,msContents/msItem/filiation[@type='current'], physDesc/objectDesc/supportDesc/condition, physDesc/objectDesc/supportDesc, physDesc, msContents/msItem/textLang, msContents/msItem/docImprint, msContents/msItem/author[@role=&#34;scribe&#34;], additional)"/>
+            <param name="content" value="(respStmt,sourceDesc/bibl/date,sourceDesc/bibl/publisher, physDesc/objectDesc/supportDesc/condition, physDesc/objectDesc/supportDesc, physDesc, msContents/msItem/textLang, msContents/msItem/docImprint, msContents/msItem/author[@role=&#34;scribe&#34;], additional)"/>
         </model>
                 </elementSpec>
-                <elementSpec ident="msIdentifier">
+                <elementSpec ident="respStmt">
                     <modelSequence>
             <model behaviour="listItem">
-                <param name="content" value="idno"/>
+                <param name="content" value="resp"/>
             </model>
             <model predicate="exists(altIdentifier)" behaviour="listItem">
                 <param name="content" value="altIdentifier/idno"/>
@@ -1209,9 +1209,9 @@
                         </pb:template>
         </model>
                     <modelSequence predicate="$parameters?view='metadata'">
-            <model predicate="not(ends-with(util:document-name(.//sourceDesc), 'Introduction.xml'))" behaviour="block">
+            <!--<model predicate="not(ends-with(util:document-name(.//sourceDesc), 'Introduction.xml'))" behaviour="block">
                 <param name="content" value="fileDesc"/>
-            </model>
+            </model>-->
             <model behaviour="block">
                 <param name="content" value=".//sourceDesc/bibl/title"/>
             </model>
