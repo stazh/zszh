@@ -227,7 +227,7 @@ declare function pmf:format-id($id as xs:string?) {
         else
             number($parts[2])
     return
-        "SSRQ " || $ssrq || ' ' || $vol || ' ' || $id
+        "" || $ssrq || ' ' || $vol || ' ' || $id
 };
 
 declare function pmf:get-article-nr($id as xs:string?) {

@@ -732,9 +732,9 @@
                 <elementSpec ident="fileDesc" mode="change">
                     <modelSequence predicate="$parameters?header='short' and ancestor::TEI[@type='introduction']">
             <desc>Output a short header to be used in document listings</desc>
-            <model behaviour="block" cssClass="header-short">
+            <!--<model behaviour="block" cssClass="header-short">
                 <param name="content" value="ec:format-id(seriesStmt/idno)"/>
-            </model>
+            </model>-->
             <model behaviour="link" cssClass="header-short title">
                 <param name="content" value="                             let $subtype := ancestor::TEI/@subtype                              return switch ($subtype)                                 case 'a' return 'Reihenvorwort'                                 case 'b' return 'Vorwort'                                 case 'c' return 'Einleitung'                                 case 'd' return 'Quellenverzeichnis'                                 default return 'Introduction'                                 "/>
                 <param name="link" value="$parameters?doc"/>
