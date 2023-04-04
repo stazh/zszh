@@ -12,10 +12,10 @@ https://teipublisher.com/exist/apps/tei-publisher/api.html
 * simply run the command `ant` in your terminal in the zszh folder and install the data package (see below).
   
 ## Data Package
-This app uses data stored in the Github repository https://github.com/stazh/erqzh-data.   
+This app uses data stored in the Github repository https://github.com/stazh/zszh-data.   
 Clone the repository 
 ```
-git clone git@github.com:stazh/erqzh-data.git
+git clone git@github.com:stazh/zszh-data.git
 ``` 
 build the xar file by running `ant` and install the data xar file. 
   
