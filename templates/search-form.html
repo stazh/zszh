@@ -9,7 +9,6 @@
     </div>
 
     <div class="card-content card-padding">
-
         <pb-search submit-buttons="true" id="search-form" action="${app}/search.html" subforms="#options" subscribe="search" data-template="pages:parse-params" value="${query}" submit-on-load="submit-on-load" redirect="redirect" data-i18n="[place-holder]search-query-attr">
             <pb-select name="type" value="${type}" data-template="pages:parse-params" slot="beforeInput">
                 <paper-item value="text"><pb-i18n key="text">Text</pb-i18n></paper-item>
