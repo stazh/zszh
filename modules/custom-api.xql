@@ -140,7 +140,7 @@ declare function api:html($request as map(*)) {
         else
             error($errors:BAD_REQUEST, "No document specified")
 };
-
+(:hier timeline?!:)
 declare function api:timeline($request as map(*)) {
     let $entries := session:get-attribute($config:session-prefix || '.hits')
     let $datedEntries := filter($entries, function($entry) {

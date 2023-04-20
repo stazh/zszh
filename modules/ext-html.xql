@@ -21,13 +21,12 @@ declare function pmf:link($config as map(*), $node as node(), $class as xs:strin
     }</a>
 };
 
+(: Hier wird das Datum für die Metadaten je Dokument definiert:)
 declare function pmf:output-date($config as map(*), $node as element(), $class as xs:string+, $content) {
     
     let $header := $node
-    let $filiation := $header/tei:fileDesc//tei:msDesc/tei:msContents/tei:msItem/tei:filiation[@type='original'][tei:origDate]
-    let $origin := $header/tei:fileDesc//tei:msDesc/tei:history/tei:origin
-    let $origDate := if (exists($filiation)) then $filiation/tei:origDate else $origin/tei:origDate
-    let $origPlace := if (exists($filiation)) then $filiation/tei:origPlace else $origin/tei:origPlace
+    let $origDate := $header/tei:fileDesc/tei:sourceDesc/tei:bibl//tei:date
+    let $origPlace := $header/tei:fileDesc/tei:publicationStmt/tei:pubPlace
     let $content := 
         if ($origDate/@from) then
             pmf:show-if-exists($node, $origDate/@from, function() {

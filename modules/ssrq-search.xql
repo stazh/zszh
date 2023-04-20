@@ -231,13 +231,13 @@ declare function query:filter($hits as element()*) {
                         case "filter-period-min" return
                             let $dateMin := xs:date($value || "-01-01")
                             for $c in $context
-                            where try { $c/ancestor-or-self::tei:TEI//tei:history/tei:origin/tei:origDate[@when >= $dateMin] } catch * {()}
+                            where try { $c/ancestor-or-self::tei:TEI//tei:fileDesc/tei:sourceDesc/tei:bibl//tei:date[@when >= $dateMin] } catch * {()}
                             return
                                 $c
                         case "filter-period-max" return
                             let $dateMax := xs:date($value || "-12-31")
                             for $c in $context
-                            where try { $c/ancestor-or-self::tei:TEI//tei:history/tei:origin/tei:origDate[@when <= $dateMax] } catch * {()}
+                            where try { $c/ancestor-or-self::tei:TEI//tei:fileDesc/tei:sourceDesc/tei:bibl//tei:date[@when <= $dateMax] } catch * {()}
                             return
                                 $c
                         case "filter-language" return
@@ -501,7 +501,7 @@ declare function query:sort($items as element()*, $sortBy as xs:string?) {
             order by
                 replace(root($item)//tei:teiHeader//tei:seriesStmt/tei:idno, "^(?:SSRQ|SDS|FDS)_([^_]+).*$", "$1"),
                 try {
-                    xs:date(root($item)//tei:teiHeader/tei:fileDesc//tei:msDesc/tei:history/tei:origin/tei:origDate/(@when|@from))
+                    xs:date(root($item)//tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl//tei:date/(@when|@from))
                 } catch * {
                     ()
                 }
@@ -553,7 +553,7 @@ declare function query:view-idno($work as element()) {
 };
 
 declare function query:view-origDate($work as element()) {
-    let $origDate := $work//tei:teiHeader/tei:fileDesc//tei:msDesc/tei:history//tei:origDate
+    let $origDate := $work//tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl//tei:date
     return
         if ($origDate/@when) then
             try {
@@ -631,7 +631,7 @@ function query:period-range($node as node(), $model as map(*)) {
         else
             collection($config:data-root)
     let $dates :=
-        for $when in $context//tei:teiHeader//tei:history/tei:origin/tei:origDate/@when
+        for $when in $context//tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl//tei:date/@when
         return
             try {
                 year-from-date(xs:date($when))
