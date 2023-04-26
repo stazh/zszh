@@ -309,7 +309,7 @@ declare variable $config:organization-id-file-name := 'organization-Id-data.xml'
 declare variable $config:metadata-file-name := 'register-data.xml';
 declare variable $config:metadata-file := doc($config:data-root || '/' || $config:metadata-file-name);
 
-declare variable $config:data-collections := ("KRP_XML", "OS_XML", "Abl_XML", "RRB_XML");
+declare variable $config:data-collections := ("Kantonsratsprotokolle", "Gesetzessammlung","Amtsblatt", "Regierungsratsbeschluesse");
 
 (:~
  : The root of the collection hierarchy whose files should be displayed

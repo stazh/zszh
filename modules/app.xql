@@ -442,13 +442,13 @@ declare
     %templates:default("editionseinheit","")
 function app:get-edition-unit($node as node(), $model as map(*), $editionseinheit as xs:string) {
     switch($editionseinheit) 
-        case "Abl_XML" return   
+        case "Amtsblatt" return   
             <pb-i18n key="menu.Abl_XML"/>
-        case "OS_XML" return 
+        case "Gesetzessammlung" return 
             <pb-i18n key="menu.OS_XML"/>
-        case "KRP_XML" return 
+        case "Kantonsratsprotokolle" return 
             <pb-i18n key="menu.KRP_XML"/>
-        case "RRB_XML" return 
+        case "Regierungsratsbeschluesse" return 
             <pb-i18n key="menu.RRB_XML"/>
         default return 
             <pb-i18n key="menu.all"/>

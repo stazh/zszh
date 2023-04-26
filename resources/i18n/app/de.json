@@ -88,10 +88,10 @@
   	"all-people" : "Alle Personen",
   	"all-organizations" : "Alle Organisationen",
   	"ZH_NF_I_1_11":"Gedruckte Mandate für Stadt und/oder Landschaft Zürich",
-  	"KRP_XML":"Kantonsratsprotokolle (KRP)",
-  	"OS_XML":"Gesetzessammlung (OS)",
-  	"Abl_XML":"Amtsblatt (Abl)",
-    "RRB_XML":"Regierungsratsbeschlüsse (RRB)"
+  	"KRP_XML":"Kantonsratsprotokolle",
+  	"OS_XML":"Gesetzessammlung",
+  	"Abl_XML":"Amtsblatt",
+    "RRB_XML":"Regierungsratsbeschlüsse"
   },  
   "mentions-of":"Erwähnungen von",
   "feedback": "Feedback",
