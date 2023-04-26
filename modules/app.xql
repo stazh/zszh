@@ -446,10 +446,6 @@ function app:get-edition-unit($node as node(), $model as map(*), $editionseinhei
             <pb-i18n key="menu.Abl_XML"/>
         case "OS_XML" return 
             <pb-i18n key="menu.OS_XML"/>
-        case "ZH_NF_I_1_11" return 
-            <pb-i18n key="menu.ZH_NF_I_1_11"/>
-        case "ZH_NF_I_1_3" return 
-            <pb-i18n key="menu.ZH_NF_I_1_3"/>
         case "KRP_XML" return 
             <pb-i18n key="menu.KRP_XML"/>
         case "RRB_XML" return 
