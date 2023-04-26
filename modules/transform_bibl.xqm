@@ -5,7 +5,7 @@ module namespace t-bibl = "http://jinntec.de/ssrq/t_bibl";
 declare default element namespace "http://www.tei-c.org/ns/1.0";
 declare namespace test = "http://exist-db.org/xquery/xqsuite";
 
-declare variable $t-bibl:bibl := doc('../data/SSRQ_ZH_NF_Bibliographie_integral.xml')//body;
+declare variable $t-bibl:bibl := doc('../data/Bibliographie.xml')//body;
 
 (:~ Updates the provided bibliography file for easier processing and display within the tei-publisher app.
  : !!!NOTE!!! These modifications are permanent

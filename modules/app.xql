@@ -22,7 +22,7 @@ declare variable $app:PLACES := $app:HOST || "/places-db-edit/views/get-infos.xq
 declare variable $app:PERSONS := $app:HOST || "/persons-db-api/";
 declare variable $app:LEMMA := $app:HOST || "/lemma-db-edit/views/get-lem-infos.xq";
 declare variable $app:KEYWORDS := $app:HOST || "/lemma-db-edit/views/get-key-infos.xq";
-declare variable $app:LITERATUR := doc('../data/SSRQ_ZH_NF_Bibliographie_integral.xml');
+declare variable $app:LITERATUR := doc('../data/Bibliographie.xml');
 
 declare %templates:replace
     function app:show-if-logged-in($node as node(), $model as map(*)) {
@@ -759,7 +759,7 @@ declare %private function app:bibl-quoted($permalink as xs:string) as element(ul
  : Link zur BSG; 
  : Editionsstück(e) in dem der Literaturtitel zitiert wird. 
  : @see http://www.rechtsquellen-online.ch/startseite/literaturverzeichnis 
- : @see data/SSRQ_ZH_NF_Bibliographie_integral.xml
+ : @see data/Bibliographie.xml
  : @return div element
  :)
 declare
