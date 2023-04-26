@@ -29,7 +29,7 @@ declare function idx:get-metadata($root as element(), $field as xs:string) {
         switch ($field)
             case "title" return
                 string-join((
-                    $header//tei:msDesc/tei:head, $header//tei:titleStmt/tei:title[@type = 'main'],
+                    $header//tei:sourceDesc/tei:bibl/tei:title,
                     $header//tei:titleStmt/tei:title,
                     $root/dbk:info/dbk:title
                 ), " - ")
@@ -45,10 +45,7 @@ declare function idx:get-metadata($root as element(), $field as xs:string) {
                     $header/@xml:lang
                 ))
             case "date" return head((
-                $header//tei:correspDesc/tei:correspAction/tei:date/@when,
-                $header//tei:sourceDesc/(tei:bibl|tei:biblFull)/tei:publicationStmt/tei:date,
-                $header//tei:sourceDesc/(tei:bibl|tei:biblFull)/tei:date/@when,
-                $header//tei:fileDesc/tei:editionStmt/tei:edition/tei:date,
+                $header//tei:sourceDesc/tei:bibl/tei:date/@when,
                 $header//tei:publicationStmt/tei:date
             ))
             case "genre" return (
