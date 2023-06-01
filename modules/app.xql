@@ -126,6 +126,8 @@ declare function app:select-kanton() {
         $first
 };
 
+(: HIER ETWAS ANPASSEN bzgl. Collection? --> list-volumes wird aber niergends aufgerufen:)
+
 declare function app:list-volumes($node as node(), $model as map(*), $root as xs:string?) {
     let $kanton := replace($model?root, "^/?(.*)$", "$1")
     for $volume in collection($config:data-root)/tei:TEI[@type='volinfo'][matches(.//tei:seriesStmt/tei:idno[@type="machine"], '^\w+_' || $kanton)]
