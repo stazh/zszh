@@ -76,7 +76,7 @@ declare function nav:get-metadata($config as map(*), $root as element(), $field 
             let $header := $root/tei:teiHeader
             return
             (
-                $header//tei:msDesc/tei:head, $header//tei:titleStmt/tei:title[@type = 'main'],
+                $header//tei:sourceDesc/tei:bibl/tei:title, $header//tei:titleStmt/tei:title[@type = 'main'],
                 $header//tei:titleStmt/tei:title
             )[1]
         case "author" return (
@@ -86,7 +86,7 @@ declare function nav:get-metadata($config as map(*), $root as element(), $field 
         case "language" return
             ($root/@xml:lang/string(), $root/tei:teiHeader/@xml:lang/string(), "en")[1]
         case "date" return (
-            $root/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:edition/tei:date,
+            $root/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:date,
             $root/tei:teiHeader/tei:publicationStmt/tei:date
         )[1]
         case "license" return
