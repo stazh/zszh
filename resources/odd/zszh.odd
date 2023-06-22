@@ -1179,7 +1179,7 @@
 </div></pb:template>
         </model>
         <model predicate="$parameters?mode='footer-prev'" behaviour="block" cssClass="footer button-prev">
-            <param name="target" value=""/>            
+            <param name="target" value="let $currentDate := .//tei:SourceDesc/tei:bibl/tei:date/@when let $collection := util:collection-name(.) let $allDates := for $date in collection($collection)/tei:TEI//tei:SourceDesc/tei:bibl/tei:date/@when order by xs:date($date) return $date let $idx := index-of($allDates, $currentDate)return if ($idx > 1) then util:document-name($allDates[$idx - 1]) else ()"/>           
             <pb:template xmlns="" xml:space="preserve">
                 <div>
                     <pb-link id="prev" path="[[target]]" emit="transcription" class="part-nav">
