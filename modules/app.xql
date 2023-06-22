@@ -129,8 +129,7 @@ declare function app:select-kanton() {
 (: HIER ETWAS ANPASSEN bzgl. Collection? --> list-volumes wird aber niergends aufgerufen:)
 
 declare function app:list-volumes($node as node(), $model as map(*), $root as xs:string?) {
-    let $kanton := replace($model?root, "^/?(.*)$", "$1")
-    for $volume in collection($config:data-root)/tei:TEI[@type='volinfo'][matches(.//tei:seriesStmt/tei:idno[@type="machine"], '^\w+_' || $kanton)]
+    for $volume in collection($config:data-root)/tei:TEI[@type='volinfo']
     let $order := $volume/@n
     let $count := count($model?all intersect collection(util:collection-name($volume))//tei:TEI[ft:query(., 'type:document')])
     order by $order
@@ -140,9 +139,6 @@ declare function app:list-volumes($node as node(), $model as map(*), $root as xs
                 <a href="#" data-collection="{substring-after(util:collection-name($volume), $config:data-root || "/")}">{ 
                     $pm-config:web-transform($volume/tei:teiHeader/tei:fileDesc, map { "root": $volume, "count": $count, "view": "volumes" }, $config:odd)
                 }</a>
-                {
-                    session:set-attribute("ssrq.kanton", $kanton)
-                }
             </div>
         else
             ()
