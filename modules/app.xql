@@ -18,8 +18,6 @@ declare variable $app:ALL_DOCS := collection($config:data-root);
 
 declare variable $app:HOST := "https://www.ssrq-sds-fds.ch";
 
-declare variable $app:PLACES := $app:HOST || "/places-db-edit/views/get-infos.xq";
-declare variable $app:PERSONS := $app:HOST || "/persons-db-api/";
 declare variable $app:LEMMA := $app:HOST || "/lemma-db-edit/views/get-lem-infos.xq";
 declare variable $app:KEYWORDS := $app:HOST || "/lemma-db-edit/views/get-key-infos.xq";
 declare variable $app:LITERATUR := doc('../data/Bibliographie.xml');
@@ -73,58 +71,7 @@ function app:download-xml($node as node(), $model as map(*)) {
     </a>
 };
 
-(:~
- :
- :)
-declare
-    %templates:wrap
-function app:kanton-auswahl($node as node(), $model as map(*)) {
-    let $kanton := app:select-kanton()
-    for $tr in $node/tr
-    let $class := if ($tr/td[2]/string() = $kanton) then 'active' else ()
-    return
-        <tr class="{$class}">
-            { templates:process(subsequence($tr/td, 1, 2), $model) }
-            <td>
-            {
-                let $current := $tr/td[2]
-                let $docs := 
-                    $app:ALL_DOCS/tei:TEI[ft:query(., 'kanton:' || $current, query:options(()))][.//tei:text/tei:body/*]
-                        except
-                    $app:TEMP_DOCS
-                let $docs := nav:filter-collections($docs)
-                return (
-                    $tr/td[3]/@*,
-                    if (exists($docs)) then
-                        <span>
-                            <a href="#" data-collection="{$current}">{$tr/td[3]/node()} </a>
-                            <span class="badge">{count($docs)}</span>
-                        </span>
-                    else
-                        $tr/td[3]/node()
-                )
-            }
-            </td>
-        </tr>
-};
 
-declare function app:select-kanton() {
-    let $first := fold-left(("ZH", "BE", "LU", "UR", "SZ", "OW", "NW", "GL", "ZG", "FR", "SO", "BS", "BL", "SH", "AR", "AI", "SG",
-        "GR", "AG", "TG", "TI", "VD", "VS", "NE", "GE", "JU"), (), function($zero, $kanton) {
-            if ($zero) then
-                $zero
-            else if (exists(
-                $app:ALL_DOCS/tei:TEI[ft:query(., 'kanton:' || $kanton)]
-                    except
-                $app:TEMP_DOCS
-            )) then
-                $kanton
-            else
-                $zero
-        })
-    return
-        $first
-};
 
 (: HIER ETWAS ANPASSEN bzgl. Collection? --> list-volumes wird aber niergends aufgerufen:)
 
